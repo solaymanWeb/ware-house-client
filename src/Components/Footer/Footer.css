@@ -1,0 +1,19 @@
+.footer-container{
+    text-align: left;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    background-color: #322a5a;
+    color: #e0e0e0;
+}
+.footer-container h4{
+    color: orange;
+
+}
+.footer-container p{
+    margin-bottom: 0px;
+
+}
+.footer-container p ,h4{
+    padding-left: 50px;
+    padding-left: 50px;
+}

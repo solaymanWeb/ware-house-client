@@ -1,9 +1,8 @@
 .header {
-   background-color:beige;
+   background-color:#9eecd2;
 }
-.header img{
-   width: 150px;
-   height: 10%;
+.navbar{
+    padding: 0;
 }
 .header a {
     color: black;
