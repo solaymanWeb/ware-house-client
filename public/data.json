@@ -1,0 +1,51 @@
+[
+    {
+      "_id": "626268d0eb37539ff0b33aa2",
+      "picture": "https://static-01.daraz.com.bd/p/d84c7c7540670cc846f71c3079f1a985.jpg",
+      "name": "Walton Refrigerator-WFE-2N5",
+      "price": 30000,
+      "discription": "Walton Refrigerator-WFE-2N5-GDXX-XX-Gross -316 Ltr",
+      "supplier": "Solayman"
+    },
+    {
+      "_id": "626268d027278885dd653b37",
+      "picture": "https://static-01.daraz.com.bd/p/2102185935c1c8be690a8f2cb0512f8c.jpg",
+      "name": "Walton Refrigerator-WFAT-2A3",
+      "price": 20000,
+      "discription": "Walton Refrigerator-WFAT-2A3-GDEL-XX-Gross-213 Ltr",
+      "supplier": "Saiful"
+    },
+    {
+      "_id": "626268d04d29d16cdc9ec946",
+      "picture": "https://static-01.daraz.com.bd/p/7b93c2db4673f5fb59cee3394d58e8dc.jpg",
+      "name": "Walton WFB-2E0",
+      "price": 28000,
+      "discription": "Walton WFB-2E0-GDEL-XX 244 lit",
+      "supplier": "Kalam"
+    },
+    {
+      "_id": "626268d071e018337c6beb85",
+      "picture": "https://static-01.daraz.com.bd/p/c538fbbededf17e42b7850c4e5408d5b.jpg",
+      "name": "Walton Refrigerator WFA",
+      "price": 51,
+      "discription": "Walton Refrigerator WFA-2A3-GDEL-XX",
+      "supplier": "Rohim"
+    },
+    {
+      "_id": "626268d020ec1789971abe26",
+      "picture": "https://static-01.daraz.com.bd/p/mdc/b31bed6d2dccaa2114f24f2b27f4230a.png",
+      "name": "REFRIGERATORS WFC-3D8",
+      "price": 10,
+      "discription": "WALTON REFRIGERATORS WFC-3D8-GDNE-XX",
+      "supplier": "tuhin"
+    },
+    {
+      "_id": "626268d0a2a6591dd8b0075b",
+      "picture": "https://static-01.daraz.com.bd/p/4736b090293bbca12e0fee5311257dbb.jpg",
+      "name": "WFA-2A3-GDXX-XX",
+      "price": 51,
+      "discription": "WFA-2A3-GDXX-XX ",
+      "supplier": "borkot"
+     
+    }
+  ]
