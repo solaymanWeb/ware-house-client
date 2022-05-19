@@ -1,3 +1,24 @@
 .home-container{
     padding-top: 10px;
 }
+.home-container img{
+    width: 100%;
+}
+.services-container{
+    padding: 100px 0px;
+}
+.single-fridge img{
+    width: 100%;  
+}
+.single-fridge {
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    padding: 10px;
+    text-align: left;
+ 
+}
+.single-fridge p {
+    margin-bottom: 0px;
+}
+.single-fridge Button {
+    margin-top: 15px;
+}
