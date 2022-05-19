@@ -5,7 +5,13 @@
     width: 100%;
 }
 .services-container{
-    padding: 100px 0px;
+    padding-top: 70px;
+    padding-bottom: 100px;
+}
+.inventory-title{
+    padding-bottom: 30px;
+    font-weight: 600;
+    color: orange;
 }
 .single-fridge img{
     width: 100%;  
@@ -21,4 +27,19 @@
 }
 .single-fridge Button {
     margin-top: 15px;
+}
+/* DISPLAY FRIDGE CSS */
+
+.direct-cool-refrigeration{
+    text-align: left;
+}
+.coll-fridge-detail{
+    
+}
+.direct-coll-area{
+    display: flex;
+    align-items: center;
+}
+.cool-fridge-img img{
+     width: 100%;
 }
