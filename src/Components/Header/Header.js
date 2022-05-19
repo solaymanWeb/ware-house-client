@@ -24,7 +24,9 @@ const Header = () => {
         navbarScroll
       >
         <Link to='/'>Home</Link>
-        <Link to="/blog">Blog</Link>
+        <Link to='/blog'>Blog</Link>
+        <Link to='/login'>Log in</Link>
+        <Link to='/signup'>Sign up</Link>
 
 
 
