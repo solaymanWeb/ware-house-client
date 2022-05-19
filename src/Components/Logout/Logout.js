@@ -1,19 +1,13 @@
 
-const auth = getAuth(app);
+import React from 'react';
+import './Logout.css'
 
-
-
-
-
-// import React from 'react';
-// import './Logout.css'
-
-// const Logout = () => {
-//     return (
-//         <div>
+const Logout = () => {
+    return (
+        <div>
             
-//         </div>
-//     );
-// };
+        </div>
+    );
+};
 
-// export default Logout;
+export default Logout;
