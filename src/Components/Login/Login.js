@@ -81,7 +81,7 @@ const forgetPassword= async ()=>{
           <Button  onClick={forgetPassword}>Forget password</Button>
           </div>
             </div>
-            <h6>New use?  <Link to='/register'>please registerd</Link> </h6>
+            <h6>New use?  <Link to='/signup'>please registerd</Link> </h6>
         </div>
     );
 };
