@@ -35,7 +35,7 @@ const Home = () => {
                 <h3 className='inventory-title'>Inventory</h3>
             <Row className="g-5">
                 {
-                    fridges.map(fridge => 
+                    fridges.slice(0, 6).map(fridge => 
                     <Col lg={4}>
                         <div  className='single-fridge'>
                             <img src={fridge.picture} alt="" />

@@ -9,6 +9,7 @@ import Signup from './Components/Signup/Signup';
 import Login from './Components/Login/Login';
 import Additem from './Components/Additem/Additem';
 import Details from './Components/Details/Details';
+import NotFound from './Components/NotFound/NotFound';
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
         <Route path='/additem' element={<Additem></Additem>}></Route>
         <Route path='/login' element={<Login></Login>}></Route>
         <Route path='/signup' element={<Signup></Signup>}></Route>
+        <Route path='*' element={<NotFound></NotFound>}></Route>
       </Routes>
       <Footer></Footer>
     </div>
