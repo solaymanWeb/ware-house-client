@@ -32,16 +32,16 @@ const Header = () => {
         <Link to='/'>Home</Link>
         <Link to='/blog'>Blog</Link>
         {
-          user? <button onClick={logout}className='log-out'>Log out</button>: <Link to='/login'>Log in</Link>
+          user? <>
+            <Link to='/additem'>Add item</Link>
+          <button onClick={logout}
+          className='log-out'>Log out</button>
+          </>: 
+          
+          <Link to='/login'>Log in</Link>
+
         }
-       
         <Link to='/signup'>Sign up</Link>
-
-
-
-        {/* <Nav.Link to='/'>Home</Nav.Link>
-        <Nav.Link to="/blog">Blog</Nav.Link> */}
-
       </Nav>
     </Navbar.Collapse>
   </Container>

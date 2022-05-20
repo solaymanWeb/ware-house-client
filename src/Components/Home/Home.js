@@ -1,21 +1,29 @@
 import React, { useEffect, useState } from 'react';
 import { Col, Container, Row, Button } from 'react-bootstrap';
+import { useNavigate } from 'react-router-dom';
 import banner from '../Images/banner.jpg';
 import './Home.css';
 
 const Home = () => {
     const [fridges, setFridges]=useState([]);
+    const navigate = useNavigate();
+
     useEffect(()=>{
-        fetch('data.json')
+        fetch('http://localhost:5000/fridge')
         .then(res =>res.json())
         .then(data => setFridges(data));
     },[])
+
+    const updateQuantity=id=>{   
+        if(id){
+            navigate(`/details/${id}`);
+        }
+    }
 
 
     return (
         <div >
             {/* BANNER AREA  */}
-
             <Container className='home-container'>
             <Row>
                 <Col><img src={banner} alt="" /></Col>
@@ -23,20 +31,20 @@ const Home = () => {
             </Container>
 
             {/* PRODUCT AREA */}
-
             <Container className='services-container' >
                 <h3 className='inventory-title'>Inventory</h3>
             <Row className="g-5">
                 {
-                    fridges.map(fridge => <Col lg={4}>
-                        <div className='single-fridge'>
+                    fridges.map(fridge => 
+                    <Col lg={4}>
+                        <div  className='single-fridge'>
                             <img src={fridge.picture} alt="" />
                             <h6>Name : {fridge.name}</h6>
                             <p>Price : {fridge.price}</p>
                             <p>Quantity : {fridge.quantity}</p>
                             <p>Suplier : {fridge.supplier}</p>
                             <p>Discription : {fridge.discription}</p>
-                            <Button variant="success">Update Quantity</Button>
+                            <Button onClick={()=>updateQuantity(fridge._id)} variant="success">Update Quantity</Button>
                         </div>
                     </Col> )
                 }  

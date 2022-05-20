@@ -85,25 +85,4 @@ const forgetPassword= async ()=>{
         </div>
     );
 };
-
 export default Login;
-
-
-
-
-
-
-
-
-// import React from 'react';
-// import './Login.css';
-
-// const Login = () => {
-//     return (
-//         <div>
-            
-//         </div>
-//     );
-// };
-
-// export default Login;

@@ -1,6 +1,5 @@
 [
     {
-      "_id": "626268d0eb37539ff0b33aa2",
       "picture": "https://waltonbd.com/image/cache/catalog/refrigerator-and-freezer/direct-cool-refrigerator/wfc-3f5-gdne-xx-inverter/wfc-3f5-gdne-xx-inverter/wfc-3f5-gdne-xx-id-inverter-364x364.jpg",
       "name": "Walton Refrigerator-WFE-2N5",
       "price": 30000,
@@ -8,7 +7,6 @@
       "supplier": "Solayman"
     },
     {
-      "_id": "626268d027278885dd653b37",
       "picture": "https://waltonbd.com/image/cache/catalog/refrigerator-and-freezer/direct-cool-refrigerator/wfc-3f5-gdxx-xx-inverter/wfc-3f5-gdxx-xx-inverter-id-1-364x364.jpg",
       "name": "Walton Refrigerator-WFAT-2A3",
       "price": 20000,
@@ -16,7 +14,6 @@
       "supplier": "Saiful"
     },
     {
-      "_id": "626268d04d29d16cdc9ec946",
       "picture": "https://waltonbd.com/image/cache/catalog/refrigerator-and-freezer/direct-cool-refrigerator/wfc-3f5-gdel-xx/i1-364x364.jpg",
       "name": "Walton WFB-2E0",
       "price": 28000,
@@ -24,7 +21,6 @@
       "supplier": "Kalam"
     },
     {
-      "_id": "626268d071e018337c6beb85",
       "picture": "https://waltonbd.com/image/cache/catalog/Refrigerator%20and%20Freezer/Direct%20Cool%20Refrigerator/2021/June/WFC-3F5-GDNE-XX/WFC-3F5-GDNE-XX-ID-inverter-364x364.jpg",
       "name": "Walton Refrigerator WFA",
       "price": 51,
@@ -32,7 +28,6 @@
       "supplier": "Rohim"
     },
     {
-      "_id": "626268d020ec1789971abe26",
       "picture": "https://waltonbd.com/image/cache/catalog/refrigerator-and-freezer/direct-cool-refrigerator/wfc-3f5-gdeh-xx/img-1-364x364.jpg",
       "name": "REFRIGERATORS WFC-3D8",
       "price": 10,
@@ -40,11 +35,10 @@
       "supplier": "tuhin"
     },
     {
-      "_id": "626268d0a2a6591dd8b0075b",
       "picture": "https://waltonbd.com/image/cache/catalog/refrigerator-and-freezer/direct-cool-refrigerator/wfe-3e8-gdel-xx/1-364x364.jpg",
       "name": "WFA-2A3-GDXX-XX",
       "price": 51,
-      "discription": "It will ensure you least noise & maximum storage space",
+      "discription": "WFA-2A3-GDXX-XX ",
       "supplier": "borkot"
      
     }
