@@ -16,13 +16,17 @@ const Details = () => {
         .then(data => setFridges(data))
     },[])
 
+    const handleTotalCount=event=>{
+        event.preventDefault();
+        console.log(event)
+    }
 
     return (
         <div>
         <Container className='services-container'>
             <Row>
             <Col lg={6}>
-             <div  className='single-fridge'>
+             <div  className='fridge-details single-fridge'>
               <img src={fridge.picture} alt="" />
               <h6>Name : {fridge.name}</h6>
               <p>Price : {fridge.price}</p>
@@ -32,8 +36,13 @@ const Details = () => {
              </div>
              </Col> 
             <Col lg={6}>
-              <div  className='single-fridge'>
-            
+              <div  className='single-fridge '>
+                <div>
+                    <form onClick={handleTotalCount}>
+                    <input placeholder='add number' type="number" />
+                    <input type="submit" value="Add item" />
+                    </form>
+                </div>
             </div>
              </Col> 
             </Row>

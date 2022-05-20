@@ -4,20 +4,38 @@ import './Additem.css'
 
 const Additem = () => {
     const { register, handleSubmit } = useForm();
-    const onSubmit = data => console.log(data);
+
+    const onSubmit = data => {
+        
+        const url=`http://localhost:5000/fridge`;
+        fetch(url,{
+            method: 'POST',
+            headers:{
+                'content-type':'application/json'
+            },
+            body:JSON.stringify(data)
+        })
+        .then(res =>res.json())
+        .then(data=> console.log(data))
+
+    }
+
+
     return (
         <div className='w-50 mx-auto form-container'>
-            <h2>Please add item</h2>
+            <h2 className='additem-title'>Please add item</h2>
             <form className='d-flex flex-column mb' onSubmit={handleSubmit(onSubmit)}>
-             <h5>Product Name</h5>   
-            <input className='mb-3' placeholder='Product Name' {...register("Name")} />
-            <h5>Supplier Name</h5>   
-            <input className='mb-3' placeholder='Supplier Name' {...register("Supplier name")} />
-            <textarea className='mb-3' placeholder='Description' {...register("Description")} />
-            <input className='mb-3' placeholder='Product quantity' type="number" {...register("Quantity")} />
-            <input className='mb-3' placeholder='Price' type="number" {...register("Price")} />
-            <input className='mb-3' placeholder='Photo URL' type="text" {...register("photo")} />
-            <input type="submit" />
+             <strong>Product name</strong>   
+            <input className='mb-3 p-2' placeholder='Product Name' {...register("name")} />
+            <strong>Supplier name</strong>  
+            <input className='mb-3 p-2' placeholder='Supplier Name' {...register("supplier")} />
+            <strong>Description</strong> 
+            <textarea className='mb-3 p-2' placeholder='description' {...register("discription")} />
+            <strong>price</strong> 
+            <input className='mb-3 p-2' placeholder='Price' type="number" {...register("price")} />
+            <strong>Image URL</strong> 
+            <input className='mb-3 p-2' placeholder='Photo URL' type="text" {...register("picture")} />
+            <input className='product-sub-btn' type="submit" />
             </form>
         </div>
     );
