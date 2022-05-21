@@ -46,8 +46,6 @@ const Details = () => {
     const handleDeliverd=()=>{
         let preQuantity =  fridge.quantity;
         let totalCount = preQuantity - 1;
-    
-    
 
         const url=`http://localhost:5000/fridge/${id}`;
         fetch(url,{
@@ -60,7 +58,7 @@ const Details = () => {
         .then(res =>res.json())
         .then(data=> {
             setControl(!control)
-              alert('Quantity added successfully');
+              
         }) 
 
      

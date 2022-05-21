@@ -36,7 +36,7 @@ const ManageItem = () => {
                     <Row>
                     <Col sm></Col>
                     <Col sm><h3 className='inventory-title'>Inventory all product</h3></Col>
-                    <Col sm><div className=' add-item-btn'><Link to='/additem'>Add items</Link></div></Col>
+                    <Col sm><div className=' add-item-btn'><Link to='/additem'>Add  new items</Link></div></Col>
                      </Row>
 
             <Row className="g-5">

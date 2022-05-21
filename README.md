@@ -2,9 +2,16 @@
 
 This site live link [click here see live site](https://github.com/facebook/create-react-app).
 
-## 
+## short description this site
 
-In the project directory, you can run:
+It can also be called a warehouse website or a godown for keeping any product. With this website you can manage all the products of your inventory. Or you can keep track of all the products in your store
 
-### `npm start`
+## What i use in this website
+- React laibery
+- firebase login system
+- firebase hook
+- react bootstrap
+- node.js
+- express js
+- mongodb etc 
 

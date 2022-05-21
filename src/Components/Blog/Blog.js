@@ -5,9 +5,8 @@ import './Blog.css'
 const Blog = () => {
     return (
         <div>
-            <h3>blog page</h3>
                 <Container className='blog-container'>
-                <Row>
+                <Row className='blog'>
                     <Col>
                     <h4>1. Difference between Javascript and node.js</h4>
                     <h5>- Javascript:</h5>
@@ -16,7 +15,7 @@ const Blog = () => {
                     <p> NodeJS হল একটি ক্রস-প্ল্যাটফর্ম এবং ওপেনসোর্স জাভাস্ক্রিপ্ট রানটাইম পরিবেশ যা সার্ভার-সাইডে জাভাস্ক্রিপ্ট চালানোর অনুমতি দেয়। Nodejs জাভাস্ক্রিপ্ট কোড ব্রাউজারের বাইরে চালানোর অনুমতি দেয়। Nodejs অনেক মডিউল নিয়ে আসে এবং বেশিরভাগই ওয়েব ডেভেলপমেন্টে ব্যবহৃত হয়। আমরা NodeJS এর সাহায্যে ব্রাউজারের বাইরে Javascript চালাতে পারি। এটি বেশিরভাগই সার্ভার-সাইডে ব্যবহৃত হয়। Nodejs is used in server-side development.</p>
                     </Col>
                 </Row>
-                <Row>
+                <Row className='blog'>
                     <Col>
                     <h4>1. when should you use node.js and when should you use mongodb</h4>
                     <h5>- When should we use Nodejs?</h5>
@@ -25,7 +24,7 @@ const Blog = () => {
                     <p>যদি আপনার অ্যাপ্লিকেশানের ক্রমাগতভাবে ডেটা সঞ্চয় করার ক্ষমতার প্রয়োজন হয় যাতে আপনি দক্ষতার সাথে অনুসন্ধান করতে পারেন বা পরে এটি আপডেট করতে পারেন, তাহলে আপনি সাধারণত কিছু ধরণের ডাটাবেস ব্যবহার করবেন। কয়েক ডজন জনপ্রিয় ডাটাবেস রয়েছে। MongoDB এরকম একটি ডাটাবেস। MariaDB, MySql, CouchDB, DynamoDB (AWS-এ), Postgres হল অন্যান্য ডাটাবেসের উদাহরণ। বিভিন্ন ডাটাবেসের বিভিন্ন শক্তি (যে জিনিসগুলি তারা সেরা) এবং সেগুলি ব্যবহার করার বিভিন্ন উপায় রয়েছে তাই আপনি যা করছেন তার জন্য সঠিক/সেরা ডাটাবেস চয়ন করা সম্পূর্ণ ভিন্ন প্রশ্ন।</p>
                     </Col>
                 </Row>
-                <Row>
+                <Row className='blog'>
                     <Col>
                     <h4>3. Difference to between SQL and noSQL</h4>
                     <h5>- SQL</h5>

@@ -20,7 +20,7 @@ const Header = () => {
      <Navbar bg="" expand="lg">
     <Container>
     <Navbar.Brand href="#">
-        <strong>Fridge House</strong>
+        <Link to='/'><strong>Fridge House</strong></Link>
     </Navbar.Brand>
     <Navbar.Toggle aria-controls="navbarScroll" />
     <Navbar.Collapse id="navbarScroll">
