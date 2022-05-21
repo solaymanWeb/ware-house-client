@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useCallback, useEffect, useState } from 'react';
 import { useForm } from "react-hook-form";
 import './Additem.css'
 
@@ -7,7 +7,9 @@ const Additem = () => {
     const { register, reset, handleSubmit } = useForm();
     const [message, setMessage]=useState()
 
-    const onSubmit = data => {  
+    const onSubmit = (data) => {  
+
+
         //data create and send server
         const url=`http://localhost:5000/fridge`;
         fetch(url,{
@@ -23,8 +25,7 @@ const Additem = () => {
                 const success = 'Data added success !'
                 setMessage(success)
             }      
-        })  
-    
+        }) 
     }
 
   
@@ -36,19 +37,19 @@ const Additem = () => {
                <h2 className='additem-title'>Please add item</h2>
             <form className='d-flex flex-column mb' onSubmit={handleSubmit(onSubmit)}>
              <strong>Product name</strong>   
-            <input className='mb-3 p-1' placeholder='Product Name' {...register("name")} />
+            <input className='mb-3 p-1' placeholder='Product Name' {...register("name")} required />
             <strong>Supplier name</strong>  
-            <input className='mb-3 p-1' placeholder='Supplier Name' {...register("supplier")} />
+            <input className='mb-3 p-1' placeholder='Supplier Name' {...register("supplier")} required />
             <strong>Description</strong> 
-            <textarea className='mb-3 p-1' placeholder='description' {...register("discription")} />
+            <textarea className='mb-3 p-1' placeholder='description' {...register("discription")}required  />
             <strong>Price</strong> 
-            <input className='mb-3 p-1' placeholder='Price' type="number" {...register("price")} />
+            <input className='mb-3 p-1' placeholder='Price' type="number" {...register("price")} required />
             <strong>Quantity</strong>
-            <input className='mb-3 p-1' placeholder='Quantity' type="number" {...register("quantity")} />
+            <input className='mb-3 p-1' placeholder='Quantity' type="number" {...register("quantity")}required  />
             <strong>Image URL</strong> 
-            <input className='mb-3 p-1' placeholder='Photo URL' type="text" {...register("picture")} />
+            <input className='mb-3 p-1' placeholder='Photo URL' type="text" {...register("picture")} required />
             <h4 style={{color:"green" }}>{message}</h4>
-            <input onClick={reset} className='product-sub-btn' type="submit" />
+            <input className='product-sub-btn' type="submit" />
             </form>
             </div>
         </div>

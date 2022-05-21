@@ -16,10 +16,38 @@ const Details = () => {
         .then(data => setFridges(data))
     },[])
 
-    const handleTotalCount=event=>{
+    const handleQuantity=event=>{
         event.preventDefault();
-        console.log(event)
+        const quantity =event.target.number.value;
+        console.log(quantity)
+
+// update quantity
+        const url=`http://localhost:5000/fridge/${id}`;
+        fetch(url,{
+            method: 'PUT',
+            headers:{
+                'content-type':'application/json'
+            },
+            body:JSON.stringify(quantity)
+        })
+        .then(res =>res.json())
+        .then(data=> {
+            alert('Quantity added successfully');
+            event.target.reset();
+            console.log(data)
+
+            // if(data){
+            //     const success = 'Data added success !'
+            //      setMessage(success)
+            // }      
+        }) 
+
     }
+
+    console.log(fridge)
+
+    //  data create and send server
+
 
     return (
         <div>
@@ -38,9 +66,10 @@ const Details = () => {
             <Col lg={6}>
               <div  className='single-fridge '>
                 <div>
-                    <form onClick={handleTotalCount}>
-                    <input placeholder='add number' type="number" />
-                    <input type="submit" value="Add item" />
+                    <form onSubmit={handleQuantity} >
+                    <input placeholder='add number' name='number' type="number" />
+                    <br/>
+                    <input  type="submit"  />
                     </form>
                 </div>
             </div>
