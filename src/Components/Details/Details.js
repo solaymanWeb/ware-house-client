@@ -3,23 +3,28 @@ import { useParams } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import { Button, Col, Container, Row } from 'react-bootstrap';
 import './Details.css'
+import { set } from 'react-hook-form';
 
 const Details = () => {
     const {id}=useParams();
     const [fridge, setFridges]=useState([]);
-    const [count, setCount]=useState();
+    const [control, setControl]=useState(true)
+
+
+  
 
     useEffect(()=>{
        const  url = `http://localhost:5000/fridge/${id}`;
         fetch(url)
         .then(res => res.json())
         .then(data => setFridges(data))
-    },[])
+    },[control])
 
     const handleQuantity=event=>{
         event.preventDefault();
         const quantity =event.target.number.value;
-        console.log(quantity)
+        let totalCount= parseInt(quantity )+ parseInt(fridge.quantity);
+        console.log(totalCount)    
 
 // update quantity
         const url=`http://localhost:5000/fridge/${id}`;
@@ -28,23 +33,38 @@ const Details = () => {
             headers:{
                 'content-type':'application/json'
             },
-            body:JSON.stringify(quantity)
+            body:JSON.stringify({totalCount})
         })
         .then(res =>res.json())
         .then(data=> {
-            alert('Quantity added successfully');
-            event.target.reset();
-            console.log(data)
-
-            // if(data){
-            //     const success = 'Data added success !'
-            //      setMessage(success)
-            // }      
+            setControl(!control)
+              alert('Quantity added successfully');
         }) 
 
     }
+            //Delivert button 
+    const handleDeliverd=()=>{
+        let preQuantity =  fridge.quantity;
+        let totalCount = preQuantity - 1;
+    
+    
 
-    console.log(fridge)
+        const url=`http://localhost:5000/fridge/${id}`;
+        fetch(url,{
+            method: 'PUT',
+            headers:{
+                'content-type':'application/json'
+            },
+            body:JSON.stringify({totalCount})
+        })
+        .then(res =>res.json())
+        .then(data=> {
+            setControl(!control)
+              alert('Quantity added successfully');
+        }) 
+
+     
+    }
 
     //  data create and send server
 
@@ -67,10 +87,12 @@ const Details = () => {
               <div  className='single-fridge '>
                 <div>
                     <form onSubmit={handleQuantity} >
-                    <input placeholder='add number' name='number' type="number" />
+                    <input placeholder='add number' name='number' type="number" required />
+                    <br/>
                     <br/>
                     <input  type="submit"  />
                     </form>
+                    <Button onClick={()=>handleDeliverd(fridge._id)}>Delivered</Button>
                 </div>
             </div>
              </Col> 
