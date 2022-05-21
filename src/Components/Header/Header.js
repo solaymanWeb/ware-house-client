@@ -24,22 +24,18 @@ const Header = () => {
     </Navbar.Brand>
     <Navbar.Toggle aria-controls="navbarScroll" />
     <Navbar.Collapse id="navbarScroll">
-        <Nav
-        className="ms-auto my-2 my-lg-0"
-        style={{ maxHeight: '100px' }}
-        navbarScroll
-      >
+        <Nav className="ms-auto my-2 my-lg-0" style={{ maxHeight: '100px' }}navbarScroll>
+
         <Link to='/'>Home</Link>
         <Link to='/blog'>Blog</Link>
         {
           user? <>
+            <Link to='/manageitem'>Manage items</Link>
             <Link to='/additem'>Add item</Link>
           <button onClick={logout}
           className='log-out'>Log out</button>
           </>: 
-          
           <Link to='/login'>Log in</Link>
-
         }
         <Link to='/signup'>Sign up</Link>
       </Nav>

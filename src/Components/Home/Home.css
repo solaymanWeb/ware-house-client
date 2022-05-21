@@ -6,10 +6,12 @@
 }
 .services-container{
     padding-top: 70px;
-    padding-bottom: 100px;
+    padding-bottom: 20px;
+    border-bottom: 2px solid #fafafa;
 }
 .inventory-title{
     padding-bottom: 30px;
+    padding-top: 25px;
     font-weight: 600;
     color: orange;
 }
@@ -29,12 +31,12 @@
     margin-top: 15px;
 }
 /* DISPLAY FRIDGE CSS */
+.display-fridge-container{
+    border-top: 2px solid #e8e8e8;
+}
 
 .direct-cool-refrigeration{
     text-align: left;
-}
-.coll-fridge-detail{
-    
 }
 .direct-coll-area{
     display: flex;
@@ -42,4 +44,22 @@
 }
 .cool-fridge-img img{
      width: 100%;
+}
+
+/* //manage all item button */
+.manage-all-items-btn {
+   
+    margin:0 auto;
+   
+
+}
+.manage-all-items-btn a{
+    text-decoration: none;
+    background: green;
+    color: white;
+    display: inline-block;
+    padding: 10px 30px;
+    border-radius: 6px;
+    font-size: 18px;
+    margin-top: 100px
 }

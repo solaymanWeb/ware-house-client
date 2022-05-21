@@ -1,0 +1,12 @@
+.add-item-btn{
+    padding-bottom: 70px;
+}
+.add-item-btn a{
+    display: inline-block;
+    padding: 10px 58px;
+    background: green;
+    color: white;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 18px;
+}

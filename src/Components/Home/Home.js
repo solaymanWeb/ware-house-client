@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Col, Container, Row, Button } from 'react-bootstrap';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom';
 import banner from '../Images/banner.jpg';
 import './Home.css';
 
@@ -49,10 +49,17 @@ const Home = () => {
                     </Col> )
                 }  
             </Row>
+             {/* Manage all item button */}
+            <Row>
+                 <Col>
+                 <div className='manage-all-items-btn'><Link to='/manageitem'>Manage all items</Link></div>
+                 </Col>
+             </Row>
             </Container>
+           
             {/* FRIDGE DISPLAY SECTION */}
 
-             <Container>
+             <Container className='display-fridge-container'>
                  <h3 className='inventory-title'>Display Fridge</h3>
                 <Row >
                     <Col lg={6}>

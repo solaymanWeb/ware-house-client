@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useState } from 'react';
 import { Button, Form } from 'react-bootstrap';
 import { useSignInWithEmailAndPassword, useSignInWithGoogle } from 'react-firebase-hooks/auth';
@@ -11,7 +11,7 @@ import './Login.css'
 const Login = () => {
 const [email, setEmail]=useState('');
 const [password, setPassword]=useState('');
-const [signInWithGoogle]=useSignInWithGoogle(auth);
+const [signInWithGoogle, gUser]=useSignInWithGoogle(auth);
 const [
   signInWithEmailAndPassword,
   user,
@@ -35,16 +35,20 @@ const handlePassword =event=>{
 const createSignIn =event =>{
   event.preventDefault();
   signInWithEmailAndPassword(email, password)
-  // navigate(from, { replace: true });
+ 
 }
 
+// useEffect(()=>{
+  if(user || gUser){
+    navigate(from, {replace: true});
+    // console.log(from)
+  }
+// },[user, navigate])
 const handleGoogleSignIn =()=>{
   signInWithGoogle();
 }
 
-if(user){
-  navigate(from)
-}
+
 const forgetPassword= async ()=>{
   await sendPasswordResetEmail(email);
      alert('Sent email for new password');
@@ -70,7 +74,7 @@ const forgetPassword= async ()=>{
             <Form.Control onBlur={handlePassword} type="password" placeholder="Password" required />
           </Form.Group>
           <div>
-            <p>{error?.message}</p>
+            <p style={{color:'red'}}>{error?.message}</p>
           </div>
           <Button className='submit-btn' variant="primary" type="submit">
             Log in
