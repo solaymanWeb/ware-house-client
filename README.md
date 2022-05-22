@@ -1,6 +1,6 @@
 # Site Name: Fridge store house
 
-This site live link [click here see live site](https://github.com/facebook/create-react-app).
+This site live link [click here see live site](https://fridge-store-house.netlify.app/).
 
 ## short description this site
 
