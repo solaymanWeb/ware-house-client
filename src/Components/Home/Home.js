@@ -9,7 +9,7 @@ const Home = () => {
     const navigate = useNavigate();
 
     useEffect(()=>{
-        fetch('http://localhost:5000/fridge')
+        fetch('https://vast-castle-65427.herokuapp.com/fridge')
         .then(res =>res.json())
         .then(data => setFridges(data));
     },[])

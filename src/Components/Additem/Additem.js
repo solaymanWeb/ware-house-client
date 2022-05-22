@@ -1,17 +1,17 @@
-import React, { useCallback, useEffect, useState } from 'react';
-import { useForm } from "react-hook-form";
+import React, { useEffect } from 'react';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import { useForm,reset } from "react-hook-form";
 import './Additem.css'
 
 
 const Additem = () => {
     const { register, reset, handleSubmit } = useForm();
-    const [message, setMessage]=useState()
+
 
     const onSubmit = (data) => {  
-
-
         //data create and send server
-        const url=`http://localhost:5000/fridge`;
+        const url=`https://vast-castle-65427.herokuapp.com/fridge`;
         fetch(url,{
             method: 'POST',
             headers:{
@@ -21,14 +21,12 @@ const Additem = () => {
         })
         .then(res =>res.json())
         .then(data=> {
-            if(data){
-                const success = 'Data added success !'
-                setMessage(success)
-            }      
-        }) 
-    }
+            toast.success('Successfully! item added')
 
-  
+    
+        }) 
+        reset()
+    }
 
 
     return (
@@ -48,10 +46,10 @@ const Additem = () => {
             <input className='mb-3 p-1' placeholder='Quantity' type="number" {...register("quantity")}required  />
             <strong>Image URL</strong> 
             <input className='mb-3 p-1' placeholder='Photo URL' type="text" {...register("picture")} required />
-            <h4 style={{color:"green" }}>{message}</h4>
             <input className='product-sub-btn' type="submit" />
             </form>
             </div>
+            <ToastContainer />
         </div>
     );
 };

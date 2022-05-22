@@ -3,7 +3,7 @@ import { useParams } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import { Button, Col, Container, Row } from 'react-bootstrap';
 import './Details.css'
-import { set } from 'react-hook-form';
+
 
 const Details = () => {
     const {id}=useParams();
@@ -14,7 +14,7 @@ const Details = () => {
   
 
     useEffect(()=>{
-       const  url = `http://localhost:5000/fridge/${id}`;
+       const  url = `https://vast-castle-65427.herokuapp.com/fridge/${id}`;
         fetch(url)
         .then(res => res.json())
         .then(data => setFridges(data))
@@ -27,7 +27,7 @@ const Details = () => {
         console.log(totalCount)    
 
 // update quantity
-        const url=`http://localhost:5000/fridge/${id}`;
+        const url=`https://vast-castle-65427.herokuapp.com/fridge/${id}`;
         fetch(url,{
             method: 'PUT',
             headers:{
@@ -47,7 +47,7 @@ const Details = () => {
         let preQuantity =  fridge.quantity;
         let totalCount = preQuantity - 1;
 
-        const url=`http://localhost:5000/fridge/${id}`;
+        const url=`https://vast-castle-65427.herokuapp.com/fridge/${id}`;
         fetch(url,{
             method: 'PUT',
             headers:{

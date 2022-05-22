@@ -8,7 +8,7 @@ const ManageItem = () => {
     const [fridges, setFridges]=useState([]);
 
     useEffect(()=>{
-        fetch('http://localhost:5000/fridge')
+        fetch('https://vast-castle-65427.herokuapp.com/fridge')
         .then(res =>res.json())
         .then(data => setFridges(data));
     },[])
@@ -16,7 +16,7 @@ const ManageItem = () => {
     const handleDelete =id=>{
         const proced = window.confirm("are you sure for DELETE")
         if(proced){
-            const url =`http://localhost:5000/fridge/${id}`
+            const url =`https://vast-castle-65427.herokuapp.com/fridge/${id}`
             fetch(url,{
                 method:'DELETE'
             })
